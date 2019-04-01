@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-protocol CustomBottomSheetDelegate {
+ protocol CustomBottomSheetDelegate {
     func customSheet(actionForItemAt index: Int)
 }
 
-class CustomBottomSheet: UIView {
+open class CustomBottomSheet: UIView {
     
     
-    var delegate: CustomBottomSheetDelegate?
+     var delegate: CustomBottomSheetDelegate?
     
     
     /// Background view
@@ -54,7 +54,7 @@ class CustomBottomSheet: UIView {
         super.init(frame: frame)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
