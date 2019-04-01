@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
- protocol CustomBottomSheetDelegate {
+public protocol CustomBottomSheetDelegate {
     func customSheet(actionForItemAt index: Int)
 }
 
 open class CustomBottomSheet: UIView {
     
     
-     var delegate: CustomBottomSheetDelegate?
+   public var delegate: CustomBottomSheetDelegate?
     
     
     /// Background view
@@ -38,17 +38,17 @@ open class CustomBottomSheet: UIView {
     
     
     /// Number of actions like: ["Report","Block","Cancel"]
-    var actionTitle:[String]!
+   open var actionTitle:[String]!
     
     /// Colors for each item in order: [.black,.black,.gray,.red]
-    var colors:[UIColor]!
+   open var colors:[UIColor]!
     
     ///Height for each action button
-    var buttonHeight:CGFloat! = 60
+   open var buttonHeight:CGFloat! = 60
     
     
     /// Animation duration to slide the bottom view
-    var animationDuration:Double! = 0.6
+    open var animationDuration:Double! = 0.6
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,7 +60,7 @@ open class CustomBottomSheet: UIView {
     
     
     /// To dismiss the action sheet popup
-    func dismissSheet() {
+   open func dismissSheet() {
         dimView.fadeOut()
         ivLogo.popOut()
         containerView.slideOut(to: .bottom, x: 0, y: self.frame.maxY, duration: animationDuration+0.4, delay: 0) { (finished) in
@@ -72,7 +72,7 @@ open class CustomBottomSheet: UIView {
     
     
     /// call one time to create and set basic layout for popup view
-    func setupViewElements(){
+   open func setupViewElements(){
         
         //Adding Dim view for light black background
         dimView = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
