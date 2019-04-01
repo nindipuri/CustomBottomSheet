@@ -1,6 +1,7 @@
 # CustomBottomSheet
 
-Custom actionsheet provide customized view with different action colors and animated logo
+CustomBottomSheet provide customized view with different action colors and animated logo.
+CustomBottomSheet is an extensible library to quickly create custom action sheet controller.
 
 ## Getting Started
 
