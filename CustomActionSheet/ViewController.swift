@@ -16,8 +16,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     
         actionSheet = CustomBottomSheet(frame: view.frame)
-        actionSheet.colors = [.black,.black,.red]
-        actionSheet.actionTitle = ["Report","Block","Cancel"]
+        actionSheet.colors = [.red,.black,.black,.black]
+        actionSheet.actionTitle = ["Block","Report","Unfriend","Cancel"]
         actionSheet.delegate = self
         actionSheet.buttonHeight = 64
         actionSheet.animationDuration = 0.7
@@ -36,7 +36,6 @@ extension ViewController: CustomBottomSheetDelegate{
             
         case 0:
             print(index)
-            actionSheet.setupViewElements()
 
             break
             
